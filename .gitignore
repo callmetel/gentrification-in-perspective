@@ -1,0 +1,9 @@
+/*
+*~
+.DS_Store
+!*.md
+
+!/.gitignore
+
+# ignore node/grunt dependency directories
+node_modules/
