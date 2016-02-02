@@ -6,4 +6,4 @@
 !/.gitignore
 
 # ignore node/grunt dependency directories
-bower_components
+!/assets/bower_components/
