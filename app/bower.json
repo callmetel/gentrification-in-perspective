@@ -1,0 +1,26 @@
+{
+  "name": "assets",
+  "homepage": "https://github.com/cmeeinspire/gentrification-in-perspective",
+  "authors": [
+    "cmeeinspire <cmeeinspire@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "^4.2.6",
+    "bitters": "^1.2.0",
+    "refills": "^0.1.0",
+    "neat": "^1.7.2",
+    "angular": "^1.4.9",
+    "backbone": "^1.2.3"
+  }
+}

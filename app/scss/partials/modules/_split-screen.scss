@@ -1,0 +1,54 @@
+div#split-screen{
+	background-image: url('../images/problemvspromise.jpg');
+	background-size: 600%;
+	background-position: 51% 90%;
+	width:100%;
+	height: 100vh;
+
+	h1{
+		@include media($rg-min){
+			font-size: 50px;
+			letter-spacing: 3px;
+		}
+		@include media($xxl-min){
+			font-size: 60px;
+		}
+	}
+
+	h2{
+		@include media($rg-min){
+			font-size: 1rem;
+		}
+	}
+	
+	div#problem-screen{
+		position:relative;
+		height:100vh;
+		width:50%;
+		float: left;
+		cursor: pointer;
+		opacity:0;
+		div#problem-text{
+			@include position(absolute, 50% 0 50% 0);
+			@include media($xl-min){
+				top:30%;
+			}
+		}
+	}
+	
+	div#promise-screen{
+		position:relative;
+		height:100vh;
+		width:50%;
+		float:right;
+		cursor: pointer;
+		opacity:0;
+		div#promise-text{
+			@include position(absolute, 50% 0 50% 0);
+			@include media($xl-min){
+				top:30%;
+			}
+		}
+	}
+
+}

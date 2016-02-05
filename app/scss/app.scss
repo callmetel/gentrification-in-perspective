@@ -1,0 +1,54 @@
+/// ////////////////////////////////////////
+/// Framework & Grid Settings
+/// ///////////////////////////////////////
+	
+	@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+	@import "../bower_components/neat/app/assets/stylesheets/neat";
+	@import "../bower_components/bitters/app/assets/stylesheets/base";
+
+
+
+/// ////////////////////////////////////////
+/// Base Stylings
+/// ///////////////////////////////////////
+
+	@import "partials/base/base";
+	@import "partials/base/grid-settings";
+	@import "partials/base/typography";
+
+
+
+/// ////////////////////////////////////////
+/// Components Stylings
+/// ///////////////////////////////////////
+
+	@import "partials/components/variables";
+
+
+
+
+/// ////////////////////////////////////////
+/// Layouts Stylings
+/// ///////////////////////////////////////
+
+	@import "partials/layouts/layout";
+
+
+
+
+/// ////////////////////////////////////////
+/// Mixins Stylings
+/// ///////////////////////////////////////
+
+	@import "partials/mixins/animations";
+	@import "partials/mixins/keyframes";
+
+
+
+
+/// ////////////////////////////////////////
+/// Modules Stylings
+/// ///////////////////////////////////////
+
+	@import "partials/modules/intro";
+	@import "partials/modules/split-screen";

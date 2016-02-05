@@ -1,0 +1,17 @@
+body{
+	margin: 0 auto;
+	height:100vh;
+	max-height: 100vh;
+	overflow: hidden;
+	div#main{
+		margin:0 auto;
+		padding:0;
+		width: 100%;
+
+		div.content{
+			margin:0 auto;
+			padding:0;
+			width: 100%;
+		}
+	}
+}
