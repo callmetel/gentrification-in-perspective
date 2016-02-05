@@ -311,6 +311,16 @@ body {
       padding: 0;
       width: 100%; }
 
+#blocker {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999; }
+
 @-webkit-keyframes pulse-animation {
   0% {
     transform: scale(1); }
@@ -498,6 +508,24 @@ body {
   to {
     -webkit-filter: blur(0px);
     filter: blur(0px); } }
+
+@-webkit-keyframes blurBackIn {
+  from {
+    -webkit-filter: blur(0px); }
+  to {
+    -webkit-filter: blur(10px); } }
+
+@-moz-keyframes blurBackIn {
+  from { }
+  to { } }
+
+@keyframes blurBackIn {
+  from {
+    -webkit-filter: blur(0px);
+    filter: blur(0px); }
+  to {
+    -webkit-filter: blur(10px);
+    filter: blur(10px); } }
 
 @-webkit-keyframes slidein {
   0% {
@@ -764,114 +792,6 @@ body {
     -ms-transform: scaleY(0.25);
     -o-transform: scaleY(0.25);
     transform: scaleY(0.25); } }
-
-@-webkit-keyframes blurOut {
-  0% {
-    -webkit-filter: blur(0px); }
-  100% {
-    -webkit-filter: blur(40px); } }
-
-@-moz-keyframes blurOut {
-  0% { }
-  100% { } }
-
-@keyframes blurOut {
-  0% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px); }
-  100% {
-    -webkit-filter: blur(40px);
-    filter: blur(40px); } }
-
-@-webkit-keyframes blurBackIn {
-  0% {
-    -webkit-filter: blur(40px); }
-  100% {
-    -webkit-filter: blur(0px); } }
-
-@-moz-keyframes blurBackIn {
-  0% { }
-  100% { } }
-
-@keyframes blurBackIn {
-  0% {
-    -webkit-filter: blur(40px);
-    filter: blur(40px); }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px); } }
-
-@-webkit-keyframes moveRight {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 55%; } }
-
-@-moz-keyframes moveRight {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 55%; } }
-
-@keyframes moveRight {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 55%; } }
-
-@-webkit-keyframes moveLeft {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 47%; } }
-
-@-moz-keyframes moveLeft {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 47%; } }
-
-@keyframes moveLeft {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 47%; } }
-
-@-webkit-keyframes moveBackRight {
-  0% {
-    background-position-x: 55%; }
-  100% {
-    background-position-x: 51%; } }
-
-@-moz-keyframes moveBackRight {
-  0% {
-    background-position-x: 55%; }
-  100% {
-    background-position-x: 51%; } }
-
-@keyframes moveBackRight {
-  0% {
-    background-position-x: 55%; }
-  100% {
-    background-position-x: 51%; } }
-
-@-webkit-keyframes moveBackLeft {
-  0% {
-    background-position-x: 47%; }
-  100% {
-    background-position-x: 51%; } }
-
-@-moz-keyframes moveBackLeft {
-  0% {
-    background-position-x: 47%; }
-  100% {
-    background-position-x: 51%; } }
-
-@keyframes moveBackLeft {
-  0% {
-    background-position-x: 47%; }
-  100% {
-    background-position-x: 51%; } }
 
 .pulse {
   -webkit-animation: pulse-animation 5s linear infinite;
@@ -1011,44 +931,6 @@ body {
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
-.moveRight {
-  -webkit-animation: moveRight 4s linear;
-  -moz-animation: moveRight 4s linear;
-  animation: moveRight 4s linear;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-
-.moveLeft {
-  -webkit-animation: moveLeft 4s linear;
-  -moz-animation: moveLeft 4s linear;
-  animation: moveLeft 4s linear;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-
-.moveBackRight {
-  -webkit-animation: moveBackRight 4s linear;
-  -moz-animation: moveBackRight 4s linear;
-  animation: moveBackRight 4s linear;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-
-.moveBackLeft {
-  -webkit-animation: moveBackLeft 4s linear;
-  -moz-animation: moveBackLeft 4s linear;
-  animation: moveBackLeft 4s linear;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-
-textarea::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
-  -webkit-transition: opacity 0.2s linear; }
-
-textarea:focus::-webkit-input-placeholder, input[type="email"]:focus::-webkit-input-placeholder, input[type="search"]:focus::-webkit-input-placeholder, input[type="text"]:focus::-webkit-input-placeholder, input[type="password"]:focus::-webkit-input-placeholder {
-  opacity: 0; }
-
 @-webkit-keyframes pulse-animation {
   0% {
     transform: scale(1); }
@@ -1236,6 +1118,24 @@ textarea:focus::-webkit-input-placeholder, input[type="email"]:focus::-webkit-in
   to {
     -webkit-filter: blur(0px);
     filter: blur(0px); } }
+
+@-webkit-keyframes blurBackIn {
+  from {
+    -webkit-filter: blur(0px); }
+  to {
+    -webkit-filter: blur(10px); } }
+
+@-moz-keyframes blurBackIn {
+  from { }
+  to { } }
+
+@keyframes blurBackIn {
+  from {
+    -webkit-filter: blur(0px);
+    filter: blur(0px); }
+  to {
+    -webkit-filter: blur(10px);
+    filter: blur(10px); } }
 
 @-webkit-keyframes slidein {
   0% {
@@ -1503,114 +1403,6 @@ textarea:focus::-webkit-input-placeholder, input[type="email"]:focus::-webkit-in
     -o-transform: scaleY(0.25);
     transform: scaleY(0.25); } }
 
-@-webkit-keyframes blurOut {
-  0% {
-    -webkit-filter: blur(0px); }
-  100% {
-    -webkit-filter: blur(40px); } }
-
-@-moz-keyframes blurOut {
-  0% { }
-  100% { } }
-
-@keyframes blurOut {
-  0% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px); }
-  100% {
-    -webkit-filter: blur(40px);
-    filter: blur(40px); } }
-
-@-webkit-keyframes blurBackIn {
-  0% {
-    -webkit-filter: blur(40px); }
-  100% {
-    -webkit-filter: blur(0px); } }
-
-@-moz-keyframes blurBackIn {
-  0% { }
-  100% { } }
-
-@keyframes blurBackIn {
-  0% {
-    -webkit-filter: blur(40px);
-    filter: blur(40px); }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px); } }
-
-@-webkit-keyframes moveRight {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 55%; } }
-
-@-moz-keyframes moveRight {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 55%; } }
-
-@keyframes moveRight {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 55%; } }
-
-@-webkit-keyframes moveLeft {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 47%; } }
-
-@-moz-keyframes moveLeft {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 47%; } }
-
-@keyframes moveLeft {
-  0% {
-    background-position-x: 51%; }
-  100% {
-    background-position-x: 47%; } }
-
-@-webkit-keyframes moveBackRight {
-  0% {
-    background-position-x: 55%; }
-  100% {
-    background-position-x: 51%; } }
-
-@-moz-keyframes moveBackRight {
-  0% {
-    background-position-x: 55%; }
-  100% {
-    background-position-x: 51%; } }
-
-@keyframes moveBackRight {
-  0% {
-    background-position-x: 55%; }
-  100% {
-    background-position-x: 51%; } }
-
-@-webkit-keyframes moveBackLeft {
-  0% {
-    background-position-x: 47%; }
-  100% {
-    background-position-x: 51%; } }
-
-@-moz-keyframes moveBackLeft {
-  0% {
-    background-position-x: 47%; }
-  100% {
-    background-position-x: 51%; } }
-
-@keyframes moveBackLeft {
-  0% {
-    background-position-x: 47%; }
-  100% {
-    background-position-x: 51%; } }
-
 div#intro-screen {
   width: 100%;
   height: 100vh;
@@ -1658,12 +1450,27 @@ div#split-screen {
     float: left;
     cursor: pointer;
     opacity: 0; }
+    div#split-screen div#problem-screen div.blur-overlay-left {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+      -webkit-filter: brightness(50%);
+      filter: brightness(50%);
+      -webkit-transition: all 5s ease-in-out;
+      -moz-transition: all 5s ease-in-out;
+      transition: all 5s ease-in-out; }
     div#split-screen div#problem-screen div#problem-text {
       position: absolute;
       top: 50%;
       right: 0;
       bottom: 50%;
-      left: 0; }
+      left: 0;
+      z-index: -2; }
       @media screen and (min-width: 1201px) {
         div#split-screen div#problem-screen div#problem-text {
           top: 30%; } }
@@ -1674,12 +1481,103 @@ div#split-screen {
     float: right;
     cursor: pointer;
     opacity: 0; }
+    div#split-screen div#promise-screen div.blur-overlay-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      -webkit-filter: brightness(50%);
+      filter: brightness(50%);
+      z-index: -1;
+      -webkit-transition: all 5s ease-in-out;
+      -moz-transition: all 5s ease-in-out;
+      transition: all 5s ease-in-out; }
     div#split-screen div#promise-screen div#promise-text {
       position: absolute;
       top: 50%;
       right: 0;
       bottom: 50%;
-      left: 0; }
+      left: 0;
+      z-index: -2; }
       @media screen and (min-width: 1201px) {
         div#split-screen div#promise-screen div#promise-text {
           top: 30%; } }
+
+.is-active {
+  display: inherit;
+  opacity: 1 !important;
+  -webkit-transition: all 5s ease-in-out;
+  -moz-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out; }
+
+.is-inactive {
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 5s ease-in-out;
+  -moz-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out; }
+
+.is-visible {
+  opacity: 1;
+  visibility: visible; }
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden; }
+
+.is-disabled {
+  opacity: .5;
+  cursor: default; }
+  .is-disabled:hover {
+    cursor: default !important; }
+  .is-disabled a {
+    cursor: default; }
+    .is-disabled a:hover {
+      cursor: default !important;
+      border: none !important; }
+
+.is-enabled {
+  opacity: 1;
+  cursor: pointer; }
+  .is-enabled:hover {
+    cursor: pointer; }
+
+.is-scrollable {
+  overflow: auto !important; }
+
+a.no-decoration, a:hover.no-decoration {
+  text-decoration: none !important;
+  border: none !important; }
+
+.blur-left {
+  background-image: url("../images/blur-problem.jpg") !important;
+  background-position: 53% 90% !important;
+  -webkit-transition: all 3s ease-in-out;
+  -moz-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out; }
+
+.blur-right {
+  background-image: url("../images/blur-promise.jpg") !important;
+  background-position: 49% 90% !important;
+  -webkit-transition: all 3s ease-in-out;
+  -moz-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out; }
+
+.blur-out {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  opacity: .2;
+  -webkit-transition: all 3s ease-in-out;
+  -moz-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out; }
+
+.blur-in {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  opacity: 1;
+  -webkit-transition: all 3s ease-in-out;
+  -moz-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out; }

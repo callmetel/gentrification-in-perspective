@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="../css/app.css">
 </head>
 <body>
+<div id="blocker" ></div>
 <div id="main">
 	<div class="content">
 		<div id="intro-screen" class="moveUp">
@@ -19,15 +20,17 @@
 		</div>
 		<div id="split-screen">
 			<div id="problem-screen">
+				<div class="blur-overlay-left is-inactive"></div>
 				<div id="problem-text" class="split-text fadeBlurUp">
 					<h1 id="problem-heading">The Problem</h1>
 					<h2 id="problem-subheading">Take a Look at the Destruction of the Community</h2>
 				</div>
 			</div>
 			<div id="promise-screen">
+				<div class="blur-overlay-right is-inactive"></div>
 				<div id="promise-text" class="split-text fadeBlurUp">
-					<h1 id="promise-heading">The Promise</h1>
-					<h2 id="promise-subheading">Take a Look at the Improvements of the City</h2>
+					<h1 id="promise-heading">The Promise <br><span class="underline"></h1>
+					<h2 id="promise-subheading">Take a Look at the Improvements of the City <br><span class="underline"></h2>
 				</div>
 			</div>
 		</div>
@@ -39,6 +42,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="../bower_components/greensock/src/minified/TweenMax.min.js"></script>
 	<script src="../js/lib/timeline.js"></script>
-	<!-- // <script src="../js/lib/mouse-functions.js"></script> -->
+	<script src="../js/lib/mouse-functions.js"></script>
 </body>
 </html>

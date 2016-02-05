@@ -80,30 +80,3 @@
 	@include animation(blurBackIn 4s linear);
 	@include animation-fill-mode(forwards);
 }
-
-.moveRight{
-	@include animation(moveRight 4s linear);
-	@include animation-fill-mode(forwards);
-}
-.moveLeft{
-	@include animation(moveLeft 4s linear);
-	@include animation-fill-mode(forwards);
-}
-
-.moveBackRight{
-	@include animation(moveBackRight 4s linear);
-	@include animation-fill-mode(forwards);
-}
-.moveBackLeft{
-	@include animation(moveBackLeft 4s linear);
-	@include animation-fill-mode(forwards);
-}
-
-
-textarea::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder  {
-	-webkit-transition: opacity 0.2s linear; 
-}
-
-textarea:focus::-webkit-input-placeholder, input[type="email"]:focus::-webkit-input-placeholder, input[type="search"]:focus::-webkit-input-placeholder, input[type="text"]:focus::-webkit-input-placeholder, input[type="password"]:focus::-webkit-input-placeholder  {
-  opacity: 0;
-}

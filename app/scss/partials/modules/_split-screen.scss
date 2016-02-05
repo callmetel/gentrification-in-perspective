@@ -28,8 +28,18 @@ div#split-screen{
 		float: left;
 		cursor: pointer;
 		opacity:0;
+
+		div.blur-overlay-left{
+			@include position(absolute, 0 0 0 0);
+			width: 100%;
+			height:100vh;
+			z-index:-1;
+			@include filter(brightness(50%));
+			@include transition(all 5s ease-in-out);
+		}
 		div#problem-text{
 			@include position(absolute, 50% 0 50% 0);
+			z-index:-2;
 			@include media($xl-min){
 				top:30%;
 			}
@@ -43,8 +53,18 @@ div#split-screen{
 		float:right;
 		cursor: pointer;
 		opacity:0;
+
+		div.blur-overlay-right{
+			@include position(absolute, 0 0 0 0);
+			width: 100%;
+			height:100vh;
+			@include filter(brightness(50%));
+			z-index:-1;
+			@include transition(all 5s ease-in-out);
+		}
 		div#promise-text{
 			@include position(absolute, 50% 0 50% 0);
+			z-index:-2;
 			@include media($xl-min){
 				top:30%;
 			}

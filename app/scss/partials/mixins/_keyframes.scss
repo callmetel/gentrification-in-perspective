@@ -79,6 +79,15 @@
   }
 }
 
+@include keyframes(blurBackIn) {
+  from {
+    @include filter(blur(0px));
+  }
+  to {
+    @include filter(blur(10px));
+  }
+}
+
 
 
 @include keyframes(slidein) {
@@ -165,41 +174,5 @@
       @include transform(translateY(800px));
       @include transform(scaleY(.25));
     }
-  }
-
-   @include keyframes(blurOut) {
-    0% {
-      @include filter(blur(0px));
-    }  
-    100% { 
-      @include filter(blur(40px));
-    }
-  }
-
-  @include keyframes(blurBackIn) {
-    0% {
-      @include filter(blur(40px));
-    }  
-    100% { 
-      @include filter(blur(0px));
-    }
-  }
-
-  @include keyframes(moveRight) {
-    0% { background-position-x: 51%; }
-    100% { background-position-x: 55%; }
-  }
-  @include keyframes(moveLeft) {
-    0% { background-position-x: 51%; }
-    100% { background-position-x: 47%; }
-  }
-
-  @include keyframes(moveBackRight) {
-    0% { background-position-x: 55%; }
-    100% { background-position-x: 51%; }
-  }
-  @include keyframes(moveBackLeft) {
-    0% { background-position-x: 47%; }
-    100% { background-position-x: 51%; }
   }
   

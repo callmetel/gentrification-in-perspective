@@ -1,32 +1,32 @@
 $(document).ready(function() {
 		var $splitScreen = $('#split-screen') ,
 			$promise = $('#promise-screen') ,
-			$promiseHead = $('#promise-heading') ,
-			$promiseSubHead = $('#promise-subheading') ,
-			$problem = $('#problem-screen') ,
-			$problemHead = $('#problem-heading') ,
-			$problemSubHead = $('#problem-subheading') ;
+			$blurOverRight = $('.blur-overlay-right') ,
+			$blurOverLeft = $('.blur-overlay-left') ,
+			$blurLeft = $('.blur-left'),
+			$blurRight = $('.blur-right'),
+			$problem = $('#problem-screen');
 
-	function activateHover(){
-		
-		// $promise.mouseenter(function() {
-		// 	$problem.addClass('blurOut');
-		// 	$problem.addClass('moveRight');
-		// 	$promise.removeClass('blurOut');
-		// 	$promise.removeClass('moveRight');
-		// 	$promise.addClass('blurBackIn');
-		// 	$promise.addClass('moveBackLeft');
-		// });
+		setTimeout(function(){
+		      $('#blocker').remove();
+		 }, 12000);	
 
-		$problem.mouseenter(function() {
-			$promise.addClass('blurOut');
-			$problem.removeClass('blurOut');
-			$problem.addClass('moveLeft');
-			$problem.addClass('moveBackRight');
-		});
+		function problemEnter(){
+			$splitScreen.addClass('blur-right');
+			$splitScreen.removeClass('blur-left');
+			$promise.addClass('blur-out');
+			$promise.removeClass('blur-in');
+			$problem.addClass('blur-in');
+		}
+		$problem.mouseenter( problemEnter );
 
-	}
+		function promiseEnter(){
+			$splitScreen.addClass('blur-left');
+			$splitScreen.removeClass('blur-right');
+			$problem.addClass('blur-out');
+			$problem.removeClass('blur-in');
+			$promise.addClass('blur-in');
+		}
+		$promise.mouseenter( promiseEnter );
 
-	setTimeout(activateHover, 10000);
-		
 });
