@@ -1,12 +1,2 @@
-/*
-*~
-.DS_Store
-!*.md
-
-!/.gitignore
-
-# ignore bower & sass cache
-!/app/bower_components/
-!/app/.sass-cache/
 
 
