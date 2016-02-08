@@ -8,7 +8,7 @@ $(document).ready(function() {
 			$problem = $('#problem-screen');
 
 		setTimeout(function(){
-		      $('#blocker').remove();
+		      $('#main-blocker').remove();
 		 }, 12000);	
 
 		function problemEnter(){

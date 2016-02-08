@@ -27,8 +27,8 @@ $(document).ready(function() {
 	// mainTL.set( introSubHead , {css:{className:'+=fadeBlur'}}, '+=1' );
 	mainTL.to( introHead , .000001, {alpha:1}, "+=3" );
 	mainTL.to( introSubHead , .000001, {alpha:1}, "+=1" );
-	mainTL.to( introHead , 1, {alpha:0, y:100}, "+=3.25" );
-	mainTL.to( introSubHead , 1, {alpha:0, y:100}, "-=1" );
+	mainTL.to( introHead , 1, {alpha:0, y:300}, "+=3.25" );
+	mainTL.to( introSubHead , 1, {alpha:0, y:300}, "-=1" );
 	mainTL.to( intro, .000001, {css:{display:'none'}});
 	mainTL.from( splitScreen , 2, {alpha:0, y:300}, "-=5");
 	mainTL.to( promise, .000001, {alpha:1} );

@@ -40,8 +40,10 @@ div#split-screen{
 		div#problem-text{
 			@include position(absolute, 50% 0 50% 0);
 			z-index:-2;
+			min-width: 200px;
 			@include media($xl-min){
 				top:30%;
+				min-width: 300px;
 			}
 		}
 	}

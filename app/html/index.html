@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="../css/app.css">
 </head>
 <body>
-<div id="blocker" ></div>
+<div id="main-blocker" class="blocker"></div>
 <div id="main">
 	<div class="content">
 		<div id="intro-screen" class="moveUp">
@@ -19,6 +19,7 @@
 			</div>
 		</div>
 		<div id="split-screen">
+			<div id="split-blocker" class="blocker"></div>
 			<div id="problem-screen">
 				<div class="blur-overlay-left is-inactive"></div>
 				<div id="problem-text" class="split-text fadeBlurUp">
@@ -42,6 +43,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="../bower_components/greensock/src/minified/TweenMax.min.js"></script>
 	<script src="../js/lib/timeline.js"></script>
-	<script src="../js/lib/mouse-functions.js"></script>
+	<script src="../js/lib/hover.js"></script>
+	<script src="../js/lib/problem.js"></script>
+	<script src="../js/lib/promise.js"></script>
 </body>
 </html>

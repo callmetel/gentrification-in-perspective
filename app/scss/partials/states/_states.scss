@@ -69,5 +69,7 @@ a.no-decoration, a:hover.no-decoration{
 	opacity:1;
 	@include transition(all 3s ease-in-out);
 }
-
+.blur{
+	@include filter(blur(10px));
+}
 
