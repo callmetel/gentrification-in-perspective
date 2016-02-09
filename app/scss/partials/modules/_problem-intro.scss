@@ -1,0 +1,17 @@
+#problem-content{
+	@include position(absolute, 200px 0 0 0);
+	z-index:10;
+	width:100vw;
+	height:100vh;
+	#problem-intro{
+		width:50%;
+		margin: 0 auto;
+		text-align:center;
+		p{
+			font-family: $content;
+			font-size: 20px;
+		}
+
+	}
+
+}

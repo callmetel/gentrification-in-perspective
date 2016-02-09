@@ -49,27 +49,3 @@ a.no-decoration, a:hover.no-decoration{
   border:none!important;
 }
 
-.blur-left{
-	background-image: url('../images/blur-problem.jpg')!important;
-	background-position: 53% 90%!important;
-	@include transition(all 3s ease-in-out);
-}
-.blur-right{
-	background-image: url('../images/blur-promise.jpg')!important;
-	background-position: 49% 90%!important;
-	@include transition(all 3s ease-in-out);
-}
-.blur-out{
-	@include filter(blur(10px));
-	opacity:.2;
-	@include transition(all 3s ease-in-out);
-}
-.blur-in{
-	@include filter(blur(0px));
-	opacity:1;
-	@include transition(all 3s ease-in-out);
-}
-.blur{
-	@include filter(blur(10px));
-}
-

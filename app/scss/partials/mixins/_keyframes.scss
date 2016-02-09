@@ -152,7 +152,33 @@
   90% { 
     @include transform(translateY(100px));
   }
+  100% { 
+    @include transform(translateY(0px));
+    @include filter(blur(0px));
+  }
+}
+
+
+@include keyframes(fadeBlurUp2) {
+  0% { 
+    @include filter(blur(40px));
+    opacity: 0;
+    @include transform(translateY(1500px));
+    @include transform(scaleX(0));
+  }
+  60% { 
+    @include filter(blur(10px));
+    opacity: 1;
+  }
+  80% { 
+    @include transform(scaleX(1));
+    @include transform(translateY(0px));
+    @include transform(translateY(1000px));
+  }
   90% { 
+    @include transform(translateY(100px));
+  }
+  100% { 
     @include transform(translateY(0px));
     @include filter(blur(0px));
   }

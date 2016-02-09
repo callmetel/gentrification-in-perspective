@@ -11,13 +11,15 @@ $(document).ready(function() {
 		disableTL = new TimelineLite();
 
 	$promise.on('click', function(){
-		promiseTL.to( $splitScreen, .0000001 , {css:{backgroundPosition:'53% 90%'}, ease:Power2.easeOut});
+		//the promise timeline controls the background animation of the section
+		promiseTL.set( $splitScreen, {css:{backgroundPosition:'53% 90%'}});
 		$splitScreen.removeClass('blur-left');
 
 		promiseTL.to( $splitScreen, 7 , {css:{backgroundPosition:'70% 90%'}, ease:Power2.easeOut});
 		promiseTL.to( $promiseText, 7 , {css:{right:+window.innerWidth, opacity:0}, className:'blur', ease:Power2.easeOut}, '-=7');
 		
+		//this timeline disables the user from changing the background position on hover
 		disableTL.to( $problem, 1 , {css:{alpha:0, display:'none'}, ease:Power2.easeOut});
-		disableTL.to( $splitBlocker, .000001 , {css:{display:'inherit'}, ease:Power2.easeOut}, '-=3');
+		disableTL.set( $splitBlocker, {css:{display:'inherit'}}, '-=3');
 	})
 });
