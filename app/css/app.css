@@ -1747,6 +1747,12 @@ div#split-screen {
     #problem-content #problem-intro p {
       font-family: "adobe-garamond-pro";
       font-size: 20px; }
+    #problem-content #problem-intro #prob-cta {
+      margin: 0 auto;
+      width: 350px;
+      margin-bottom: 20px; }
+    #problem-content #problem-intro #begin-street-view-btn {
+      cursor: pointer; }
 
 .is-active {
   display: inherit;
