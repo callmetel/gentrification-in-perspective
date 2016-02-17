@@ -58,7 +58,7 @@ $(document).ready(function() {
 		streetTL.fromTo( $('#drag-cta'), .00001, {alpha:0}, {className:'fadeBlurUp2'}, "-=6");
 		streetTL.set( $('#drag-cta'), {alpha:1},"-=3.2");
 		streetTL.from( $('#drag-bar-container'), 2, {height:0, ease:Power1.easeOut}, "-=3");
-		streetTL.fromTo( $('#drag-arrow'), 1, {opacity:0}, {opacity:1, className: 'pulse2'},"-=1");
+		streetTL.fromTo( $('#drag-arrow'), 1, {opacity:0}, {opacity:1, className: 'pulse2'},"");
 		streetTL.to( $('#drag-cta'), 3, {alpha:0, css:{marginTop:'20px', opacity:0}, className:'blur', ease:Power2.easeOut},"+=5");
 	});
 

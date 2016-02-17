@@ -9,10 +9,80 @@
 	<link rel="stylesheet" href="../css/app.css">
 </head>
 <body>
-<div id="main-blocker" class="blocker"></div>
+<!-- <div id="main-blocker" class="blocker"></div> -->
 <div id="main">
 	<div class="content">
-		<div id="intro-screen" class="moveUp">
+
+		<input type="checkbox" id="menu-toggle"/>
+  		<label id="trigger" for="menu-toggle"></label>
+ 		<label id="burger" for="menu-toggle"></label>
+		
+		<ul id="menu">	
+			<li id="nav-logo">
+				<svg version="1.1" id="nav-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 116.8 88.5" enable-background="new 0 0 116.8 88.5" xml:space="preserve">
+					<g id-"city-outline">
+						
+						<polyline  class="draw-icon" fill="none" stroke="#8A7766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+							88.6,80.6 88.6,33.4 57.4,33.4 57.4,14 26.1,14 26.1,80.6 	"/>
+						<path class="draw-icon" fill="none" stroke="#8A7766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+							M88.6,80.6"/>
+						<path fill="none" stroke="#8A7766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+							M26.1,80.6"/>
+						
+							<polyline class="draw-icon" fill="none" stroke="#8A7766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+							49.6,80.6 49.6,33.4 57.4,33.4 	"/>
+						
+							<polyline class="draw-icon" fill="none" stroke="#8A7766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+							57.4,25.8 76.8,25.8 76.8,33.4 	"/>
+						
+							<polyline class="draw-icon" fill="none" stroke="#8A7766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+							68.9,25.8 68.9,21.8 76.7,13.9 84.5,21.8 84.5,33.4 	"/>
+						
+							<line class="draw-icon" fill="none" stroke="#8A7766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="76.7" y1="4.6" x2="76.7" y2="13.9"/>
+					</g>
+					<g id="windows">
+						<rect x="31.8" y="20" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="39.7" y="20" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="31.8" y="31.8" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="39.7" y="31.8" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="31.8" y="43.5" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="39.7" y="43.5" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="31.8" y="55.2" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="39.7" y="55.2" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="31.8" y="67" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="39.7" y="67" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="47.6" y="20" fill="#8A7766" width="3.9" height="7.4"/>
+						<rect x="55.4" y="43.5" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="63.2" y="43.5" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="71" y="43.5" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="78.9" y="43.5" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="55.4" y="55.1" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="63.2" y="55.1" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="71" y="55.1" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="78.9" y="55.1" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="55.4" y="66.8" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="63.2" y="66.8" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="71" y="66.8" fill="#8A7766" width="3.7" height="3.7"/>
+						<rect x="78.9" y="66.8" fill="#8A7766" width="3.7" height="3.7"/>
+					</g>
+					<line fill="none" stroke="#8A7766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="88.6" y1="80.6" x2="108.2" y2="80.6"/>
+					<line fill="none" stroke="#8A7766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="26.1" y1="80.6" x2="6.5" y2="80.6"/>
+				</svg>
+				Gentrification In Perspective
+			</li>
+			<li id="problem-nav-link">
+				<div class="list-title">The Problem</div>
+				<span class="sub-title">The Destruction of the Community</span>
+				<div class="i-container"><i class="sub-line"></i></div>
+			</li>
+			<li class="divider"></li>
+			<li id="promise-nav-link">
+				<div class="list-title">The Promise</div>
+				<span class="sub-title">The Improvements to the Neighborhood</span>
+				<div class="i-container"><i class="sub-line"></i></div>
+			</li>
+		</ul>
+		<!-- <div id="intro-screen" class="moveUp">
 			<div id="intro-text">
 				<h1 id="intro-heading" class="heading fadeBlur">Gentrification In Perspective</h1>
 				<h2 id="intro-subheading" class="sub-heading fadeBlur2">A Closer Look at the Rising Gentrification in West Philadelphia</h2>
@@ -925,7 +995,7 @@
 					<h2 id="promise-subheading">Take a Look at the Improvements of the City <br><span class="underline"></h2>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 
@@ -934,11 +1004,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="../bower_components/greensock/src/minified/TweenMax.min.js"></script>
 	<script src="../bower_components/greensock/src/minified/plugins/DrawSVGPlugin.min.js"></script>
-	<script src="../js/lib/timeline.js"></script>
+	<!-- <script src="../bower_components/greensock/src/minified/plugins/SplitText.min.js"></script> -->
+	<script type="text/javascript" src="../js/lib/nav.js"></script>
 	<script src="../js/lib/hover.js"></script>
+	<!--<script src="../js/lib/timeline.js"></script>
 	<script src="../js/lib/problem.js"></script>
 	<script src="../js/lib/promise.js"></script>
 	<script src="../js/lib/street-view.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP87Ddl6sW6C-CXeoHlRxszGBfo1mlMT8&imagedate=2011-07&callback=initPano" async defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP87Ddl6sW6C-CXeoHlRxszGBfo1mlMT8&imagedate=2011-07&callback=initPano" async defer></script> -->
 </body>
 </html>

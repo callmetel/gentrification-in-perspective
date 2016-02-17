@@ -183,7 +183,7 @@ picture {
 /* $gray1 is apart of this palette too */
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: #ffffff;
+  background-color: black;
   color: #ffffff;
   font-family: "nimbus-sans-condensed";
   font-size: 1rem;
@@ -286,11 +286,13 @@ body {
   body div#main {
     margin: 0 auto;
     padding: 0;
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
     body div#main div.content {
       margin: 0 auto;
       padding: 0;
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
 
 .blocker {
   position: fixed;
@@ -922,6 +924,96 @@ body {
     -webkit-filter: hue-rotate(84deg);
     filter: hue-rotate(84deg); } }
 
+@-webkit-keyframes checked-anim {
+  50% {
+    width: 100vw;
+    height: 100%;
+    opacity: 0;
+    border-radius: 0; }
+  100% {
+    width: 100vw;
+    height: 100%;
+    border-radius: 0;
+    opacity: 1; } }
+
+@-moz-keyframes checked-anim {
+  50% {
+    width: 100vw;
+    height: 100%;
+    opacity: 0;
+    border-radius: 0; }
+  100% {
+    width: 100vw;
+    height: 100%;
+    border-radius: 0;
+    opacity: 1; } }
+
+@keyframes checked-anim {
+  50% {
+    width: 100vw;
+    height: 100%;
+    opacity: 0;
+    border-radius: 0; }
+  100% {
+    width: 100vw;
+    height: 100%;
+    border-radius: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes not-checked-anim {
+  0% {
+    opacity: 0; } }
+
+@-moz-keyframes not-checked-anim {
+  0% {
+    opacity: 0; } }
+
+@keyframes not-checked-anim {
+  0% {
+    opacity: 0; } }
+
+@-webkit-keyframes movebg {
+  0% {
+    background-position: 51% 90%; }
+  20% {
+    background-position: 49% 88%; }
+  40% {
+    background-position: 53% 92%; }
+  60% {
+    background-position: 50% 89%; }
+  80% {
+    background-position: 52% 91%; }
+  100% {
+    background-position: 48% 87%; } }
+
+@-moz-keyframes movebg {
+  0% {
+    background-position: 51% 90%; }
+  20% {
+    background-position: 49% 88%; }
+  40% {
+    background-position: 53% 92%; }
+  60% {
+    background-position: 50% 89%; }
+  80% {
+    background-position: 52% 91%; }
+  100% {
+    background-position: 48% 87%; } }
+
+@keyframes movebg {
+  0% {
+    background-position: 51% 90%; }
+  20% {
+    background-position: 49% 88%; }
+  40% {
+    background-position: 53% 92%; }
+  60% {
+    background-position: 50% 89%; }
+  80% {
+    background-position: 52% 91%; }
+  100% {
+    background-position: 48% 87%; } }
+
 .pulse {
   -webkit-animation: pulse-animation 5s linear infinite;
   -moz-animation: pulse-animation 5s linear infinite;
@@ -935,12 +1027,7 @@ body {
 .pulse2 {
   -webkit-animation: pulse-animation 5s linear infinite;
   -moz-animation: pulse-animation 5s linear infinite;
-  animation: pulse-animation 5s linear infinite;
-  -webkit-transform: translateY(50px);
-  -moz-transform: translateY(50px);
-  -ms-transform: translateY(50px);
-  -o-transform: translateY(50px);
-  transform: translateY(50px); }
+  animation: pulse-animation 5s linear infinite; }
 
 .spin {
   -webkit-animation: spin 7s linear;
@@ -1055,9 +1142,9 @@ body {
   animation-delay: 7s; }
 
 .fadeBlurUp2 {
-  -webkit-animation: fadeBlur 3s linear;
-  -moz-animation: fadeBlur 3s linear;
-  animation: fadeBlur 3s linear;
+  -webkit-animation: fadeBlur 2s linear;
+  -moz-animation: fadeBlur 2s linear;
+  animation: fadeBlur 2s linear;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
@@ -1095,7 +1182,7 @@ body {
 .blur-out {
   -webkit-filter: blur(10px);
   filter: blur(10px);
-  opacity: .2;
+  opacity: .75;
   -webkit-transition: all 3s ease-in-out;
   -moz-transition: all 3s ease-in-out;
   transition: all 3s ease-in-out; }
@@ -1127,6 +1214,16 @@ body {
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
+
+#menu-toggle:checked + #trigger + #burger + #menu {
+  -webkit-animation: checked-anim 1s ease both;
+  -moz-animation: checked-anim 1s ease both;
+  animation: checked-anim 1s ease both; }
+
+.move-bg {
+  -webkit-animation: movebg 10s linear infinite;
+  -moz-animation: movebg 10s linear infinite;
+  animation: movebg 10s linear infinite; }
 
 @-webkit-keyframes pulse-animation {
   0% {
@@ -1718,6 +1815,96 @@ body {
     -webkit-filter: hue-rotate(84deg);
     filter: hue-rotate(84deg); } }
 
+@-webkit-keyframes checked-anim {
+  50% {
+    width: 100vw;
+    height: 100%;
+    opacity: 0;
+    border-radius: 0; }
+  100% {
+    width: 100vw;
+    height: 100%;
+    border-radius: 0;
+    opacity: 1; } }
+
+@-moz-keyframes checked-anim {
+  50% {
+    width: 100vw;
+    height: 100%;
+    opacity: 0;
+    border-radius: 0; }
+  100% {
+    width: 100vw;
+    height: 100%;
+    border-radius: 0;
+    opacity: 1; } }
+
+@keyframes checked-anim {
+  50% {
+    width: 100vw;
+    height: 100%;
+    opacity: 0;
+    border-radius: 0; }
+  100% {
+    width: 100vw;
+    height: 100%;
+    border-radius: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes not-checked-anim {
+  0% {
+    opacity: 0; } }
+
+@-moz-keyframes not-checked-anim {
+  0% {
+    opacity: 0; } }
+
+@keyframes not-checked-anim {
+  0% {
+    opacity: 0; } }
+
+@-webkit-keyframes movebg {
+  0% {
+    background-position: 51% 90%; }
+  20% {
+    background-position: 49% 88%; }
+  40% {
+    background-position: 53% 92%; }
+  60% {
+    background-position: 50% 89%; }
+  80% {
+    background-position: 52% 91%; }
+  100% {
+    background-position: 48% 87%; } }
+
+@-moz-keyframes movebg {
+  0% {
+    background-position: 51% 90%; }
+  20% {
+    background-position: 49% 88%; }
+  40% {
+    background-position: 53% 92%; }
+  60% {
+    background-position: 50% 89%; }
+  80% {
+    background-position: 52% 91%; }
+  100% {
+    background-position: 48% 87%; } }
+
+@keyframes movebg {
+  0% {
+    background-position: 51% 90%; }
+  20% {
+    background-position: 49% 88%; }
+  40% {
+    background-position: 53% 92%; }
+  60% {
+    background-position: 50% 89%; }
+  80% {
+    background-position: 52% 91%; }
+  100% {
+    background-position: 48% 87%; } }
+
 div#intro-screen, .sky-screen {
   width: 100%;
   height: 100vh;
@@ -1958,6 +2145,184 @@ div#split-screen {
     left: -30px;
     cursor: pointer; }
 
+li, a {
+  margin: 100px 0 -55px;
+  color: #f1f1f1;
+  font-family: "adobe-garamond-pro";
+  font-weight: 600;
+  line-height: 1.8;
+  text-decoration: none;
+  text-transform: none;
+  list-style: none;
+  outline: 0;
+  display: none; }
+
+li {
+  width: 230px;
+  text-indent: 56px; }
+
+a:focus {
+  display: block;
+  color: #333;
+  background-color: #eee;
+  transition: all .5s; }
+
+#nav-logo {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: 300px;
+  margin: 100px auto; }
+  @media screen and (max-width: 1200px) {
+    #nav-logo {
+      font-size: 14px;
+      letter-spacing: 2px;
+      width: 100%; } }
+  @media screen and (min-width: 1201px) {
+    #nav-logo {
+      font-size: 16px;
+      letter-spacing: 2px;
+      width: 390px; } }
+  @media screen and (min-width: 1441px) {
+    #nav-logo {
+      font-size: 18px;
+      letter-spacing: 2px;
+      width: 400px; } }
+  #nav-logo svg {
+    width: 50px;
+    margin: 8px auto;
+    display: block; }
+
+#problem-nav-link {
+  float: left; }
+
+#promise-nav-link {
+  float: right; }
+
+#problem-nav-link, #promise-nav-link {
+  width: 50vw; }
+  #problem-nav-link div.list-title, #promise-nav-link div.list-title {
+    font-family: "nimbus-sans-condensed";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    height: 100%; }
+    @media screen and (max-width: 1200px) {
+      #problem-nav-link div.list-title, #promise-nav-link div.list-title {
+        font-size: 1.65rem; } }
+  #problem-nav-link span.sub-title, #promise-nav-link span.sub-title {
+    font-family: "adobe-garamond-pro";
+    font-weight: 100;
+    font-size: 15px;
+    display: block;
+    text-transform: capitalize;
+    margin-top: -10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center; }
+  #problem-nav-link div.i-container, #promise-nav-link div.i-container {
+    width: 100%;
+    margin-left: 25px; }
+    #problem-nav-link div.i-container i.sub-line, #promise-nav-link div.i-container i.sub-line {
+      width: 100px;
+      height: 7px;
+      background-color: #8a7766;
+      display: block;
+      margin: 20px auto;
+      text-align: center; }
+
+.divider {
+  position: absolute;
+  top: 150px;
+  right: 50%;
+  bottom: 0;
+  left: 50%;
+  z-index: 99999;
+  width: 2px;
+  background-color: #8a7766;
+  height: 50vh; }
+
+#trigger, #burger, #burger:before, #burger:after {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: #f1f1f1;
+  width: 26px;
+  height: 2px;
+  transition: .2s ease;
+  cursor: pointer;
+  z-index: 1; }
+
+#trigger {
+  height: 10px;
+  background: none; }
+
+#burger:before {
+  content: " ";
+  top: 9px;
+  left: 0; }
+
+#burger:after {
+  content: " ";
+  top: 18px;
+  left: 0; }
+
+#menu-toggle:checked + #trigger + #burger {
+  top: 35px;
+  width: 33px;
+  transform: rotate(180deg);
+  transition: transform .35s ease; }
+
+#menu-toggle:checked + #trigger + #burger:before {
+  width: 20px;
+  top: -3px;
+  left: -7px;
+  transform: rotate(135deg) translateX(-5px);
+  transition: transform .35s ease; }
+
+#menu-toggle:checked + #trigger + #burger:after {
+  width: 20px;
+  top: 3px;
+  left: -7px;
+  transform: rotate(-135deg) translateX(-5px);
+  transition: transform .35s ease; }
+
+#menu {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 110px;
+  height: 110px;
+  background-image: url("../images/transparent-bg.png");
+  background-size: 300%;
+  background-repeat: no-repeat;
+  background-position: 51% 90%;
+  animation: not-checked-anim 1s both;
+  transition: 1s;
+  right: 0;
+  cursor: pointer; }
+  @media screen and (max-width: 1200px) {
+    #menu {
+      background-size: 1000%; } }
+
+#menu-toggle:checked + #trigger + #burger + #menu {
+  animation: checked-anim 1s ease both; }
+
+#menu-toggle:checked + #trigger ~ #menu > li, a {
+  display: block; }
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  display: none; }
+
+.city-bg {
+  background-image: url("../images/nav-bg.jpg") !important; }
+
 .is-active {
   display: inherit;
   opacity: 1 !important;
@@ -2003,5 +2368,3 @@ div#split-screen {
 a.no-decoration, a:hover.no-decoration {
   text-decoration: none !important;
   border: none !important; }
-
-/*# sourceMappingURL=maps/app.css.map */

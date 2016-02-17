@@ -9,7 +9,6 @@
 .pulse2{
 
 	@include animation(pulse-animation 5s linear infinite);
-	@include transform(translateY(50px));
 
 }
 
@@ -80,7 +79,7 @@
 }
 
 .fadeBlurUp2{
-	@include animation(fadeBlur 3s linear);
+	@include animation(fadeBlur 2s linear);
 	@include animation-fill-mode(forwards);
 }
 
@@ -105,7 +104,7 @@
 }
 .blur-out{
 	@include filter(blur(10px));
-	opacity:.2;
+	opacity:.75;
 	@include transition(all 3s ease-in-out);
 }
 .blur-in{
@@ -124,4 +123,10 @@
 .hue-rotate{
 	@include animation(hueRotate 14s linear);
 	@include animation-fill-mode(forwards);
+}
+#menu-toggle:checked + #trigger + #burger + #menu {
+    @include animation(checked-anim 1s ease both);
+}
+.move-bg{
+	@include animation(movebg 10s linear infinite);
 }

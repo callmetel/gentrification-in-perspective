@@ -1,0 +1,185 @@
+li, a {
+    @include margin(100px 0 -55px 0);
+    color: $gray1;
+    font-family: $content;
+    font-weight: 600;
+    line-height: 1.8;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    outline: 0;
+    display: none;
+}
+li {
+    width: 230px;
+    text-indent: 56px;
+}
+a:focus {
+    display: block;
+    color: #333;
+    background-color: #eee;
+    transition: all .5s;
+}
+#nav-logo{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    width:300px;
+    margin: 100px auto;
+    @include media($lg-max){
+        font-size: 14px;
+        letter-spacing: 2px;
+        width:100%; 
+    }
+    @include media($xl-min){
+        font-size: 16px;
+        letter-spacing: 2px;
+        width:390px; 
+    }
+    @include media($xxl-min){
+        font-size: 18px;
+        letter-spacing: 2px;
+        width:400px; 
+    }
+    svg{
+        width:50px;
+        margin: 8px auto;
+        display: block;
+    }
+}
+#problem-nav-link{
+    float:left;
+}
+#promise-nav-link{
+    float:right;
+}
+
+#problem-nav-link, #promise-nav-link{
+    width:50vw;
+    @include media($mobile){
+
+    }
+    div.list-title{
+        font-family: $title;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        width:100%;
+        height:100%;
+        @include media($lg-max) {
+            font-size: 1.65rem;
+        }
+
+    }
+    span.sub-title{
+        font-family: $content;
+        font-weight: 100;
+        font-size: 15px;
+        display: block;
+        text-transform: capitalize;
+        margin-top: -10px;
+        text-align:center;
+        width:100%;
+        height:100%;
+        vertical-align:middle;
+    text-align:center;
+    }
+    div.i-container{
+        width:100%;
+        margin-left: 25px;
+         i.sub-line{
+            width: 100px;
+            height: 7px;
+            background-color: $brown2;
+            display: block;
+            @include margin( 20px auto 20px auto);
+            text-align: center;
+        }   
+    }
+    
+}
+.divider{
+    @include position(absolute, 150px 50% 0 50%);
+    z-index:99999;
+    width:2px;
+    background-color: $brown2;
+    height:50vh;
+}
+#trigger, #burger, #burger:before, #burger:after {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: $gray1;
+    width: 26px;
+    height: 2px;
+    transition: .2s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+#trigger {
+    height: 10px;
+    background: none;
+}
+#burger:before {
+    content: " ";
+    top: 9px;
+    left: 0;
+}
+#burger:after {
+    content: " ";
+    top: 18px;
+    left: 0;
+}
+#menu-toggle:checked + #trigger + #burger {
+    top: 35px;
+    width: 33px;
+    transform: rotate(180deg);
+    transition: transform .35s ease;
+}
+
+#menu-toggle:checked + #trigger + #burger:before {
+    width: 20px;
+    top: -3px;
+    left: -7px;
+    transform: rotate(135deg) translateX(-5px);
+    transition: transform .35s ease;
+}
+#menu-toggle:checked + #trigger + #burger:after {
+    width: 20px;
+    top: 3px;
+    left: -7px;
+    transform: rotate(-135deg) translateX(-5px);
+    transition: transform .35s ease;
+}
+#menu {
+    position: absolute;
+    margin: 0; padding: 0;
+    width: 110px;
+    height: 110px;
+    background-image: url('../images/transparent-bg.png');
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: 51% 90%;
+    animation: not-checked-anim 1s both;
+    transition: 1s;
+    right:0;
+    cursor: pointer;
+    @include media($lg-max) {
+        background-size: 1000%;
+    }
+}
+#menu-toggle:checked + #trigger + #burger + #menu {
+    animation: checked-anim 1s ease both;
+}
+#menu-toggle:checked + #trigger ~ #menu > li, a {
+    display: block;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}
+.city-bg{
+    background-image: url('../images/nav-bg.jpg')!important;
+}
