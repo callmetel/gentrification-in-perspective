@@ -1,0 +1,12 @@
+#map-legend{
+	background-color: rgba(255,255,255,0.85);
+	@include position(absolute, 0 null 0 0);
+	color: $blue1;
+
+	.square{
+		width: 25px;
+		height: 25px;
+		background-color: $blue1;
+
+	}
+}

@@ -1,0 +1,23 @@
+.street-view{
+	.gm-iv-address, .gmnoprint, .gm-style-cc{
+		display: none;
+	}
+}
+
+#streetview2011{
+	filter: sepia(100%) brightness(68%) contrast(125%) grayscale(24%);
+	-webkit-filter: sepia(100%) brightness(52%) contrast(105%) grayscale(24%);
+	-moz-filter: sepia(100%) brightness(68%) contrast(125%) grayscale(24%);
+	-ms-filter: sepia(100%) brightness(68%) contrast(125%) grayscale(24%);
+	-o-filter: sepia(100%) brightness(68%) contrast(125%) grayscale(24%);
+	
+}
+
+#streetview2016{
+	filter: saturate(100%) brightness(125%) contrast(139%);
+	-webkit-filter: saturate(120%) brightness(100%) contrast(119%);
+	-moz-filter: saturate(100%) brightness(125%) contrast(139%);
+	-ms-filter: saturate(100%) brightness(125%) contrast(139%);
+	-o-filter: saturate(100%) brightness(125%) contrast(139%);
+	
+}

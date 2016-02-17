@@ -32,6 +32,8 @@
 /// ///////////////////////////////////////
 
 	@import "partials/layouts/layout";
+	@import "partials/layouts/map";
+	@import "partials/layouts/street-view";
 
 
 
@@ -53,6 +55,10 @@
 	@import "partials/modules/intro";
 	@import "partials/modules/split-screen";
 	@import "partials/modules/problem-intro";
+	@import "partials/modules/promise-intro";
+	@import "partials/modules/legend";
+	@import "partials/modules/street-view";
+	@import "partials/modules/drag";
 
 /// ////////////////////////////////////////
 /// States Stylings

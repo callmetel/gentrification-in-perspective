@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	
-	var intro = $('#intro-screen') ,
-		$problem = $('#problem-screen'),
+	var $problem = $('#problem-screen'),
 		$promise = $('#promise-screen'),
+		$problemIntro = $('#problem-intro'),
 		$splitBlocker = $('#split-blocker'),
 		$splitScreen = $('#split-screen'),
 		$problemText = $('#problem-text') ,
@@ -14,8 +14,10 @@ $(document).ready(function() {
 		$probP= $('.prob-p'),
 		$outline = $('.btn-outline'),
 		$triangle = $('.btn-triangle'),
+		$streetview = $('.street-view-container'),
 		problemTL = new TimelineMax(),
 		contentTL = new TimelineMax(),
+		streetTL = new TimelineMax(),
 		disableTL = new TimelineLite();
 
 	$problem.on('click', function(){
@@ -46,6 +48,18 @@ $(document).ready(function() {
 		contentTL.from( $triangle , 2, {opacity:0, ease:Power2.easeOut},'-=.5');
 
 		
-	})
+	});
+
+	$triangle.on('click', function(){
+		$streetview.removeClass('is-hidden');
+		streetTL.to($problemIntro, 3, {css:{opacity:0, marginTop:'-20px', height:0}, className:'blur', ease:Power2.easeOut});
+		streetTL.to( $splitScreen, 8 , {css:{backgroundPosition:'32% 30%'}, ease:Power1.easeOut}, "-=3");
+		streetTL.fromTo( $streetview, 4, {alpha:0, ease:Power1.easeOut}, {alpha:1, ease:Power1.easeOut}, "-=6");
+		streetTL.fromTo( $('#drag-cta'), .00001, {alpha:0}, {className:'fadeBlurUp2'}, "-=6");
+		streetTL.set( $('#drag-cta'), {alpha:1},"-=3.2");
+		streetTL.from( $('#drag-bar-container'), 2, {height:0, ease:Power1.easeOut}, "-=3");
+		streetTL.fromTo( $('#drag-arrow'), 1, {opacity:0}, {opacity:1, className: 'pulse2'},"-=1");
+		streetTL.to( $('#drag-cta'), 3, {alpha:0, css:{marginTop:'20px', opacity:0}, className:'blur', ease:Power2.easeOut},"+=5");
+	});
 
 });

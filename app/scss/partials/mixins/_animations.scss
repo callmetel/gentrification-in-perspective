@@ -6,6 +6,13 @@
 
 }
 
+.pulse2{
+
+	@include animation(pulse-animation 5s linear infinite);
+	@include transform(translateY(50px));
+
+}
+
 .spin{
 	@include animation(spin 7s linear);
 }
@@ -113,4 +120,8 @@
 }
 .blur{
 	@include filter(blur(10px));
+}
+.hue-rotate{
+	@include animation(hueRotate 14s linear);
+	@include animation-fill-mode(forwards);
 }

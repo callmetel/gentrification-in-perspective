@@ -1,0 +1,31 @@
+#promise-content{
+	@include position(absolute, 0 0 0 0);
+	z-index:10;
+	width:100vw;
+	height:100vh;
+	#promise-intro{
+		@include position(absolute, 0 0 0 0);
+		z-index: 11;
+		width:50%;
+		text-align:left;
+
+		@include media($lg-max){
+			margin-left: 100px;
+			margin-top: -50px;
+			width:40%;
+		}
+		@include media($xl-min){
+			@include position(absolute, 200px 0 0 0);
+			margin-left: 190px;
+		}
+		p{
+			font-family: $content;
+			font-size: 20px;
+		}
+
+	}
+	#promise-map-scene{
+
+	}
+
+}

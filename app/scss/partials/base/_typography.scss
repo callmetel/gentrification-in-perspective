@@ -37,7 +37,7 @@ h2 {
   font-family: $content;
   letter-spacing:$base-letter-spacing;
   @include media($xxl-min){
-    font-size: 18px;
+    font-size: 20px;
     
   }
 }

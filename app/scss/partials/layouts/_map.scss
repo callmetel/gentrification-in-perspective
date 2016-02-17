@@ -1,0 +1,18 @@
+#promise-map-scene{
+
+	#map-legend{
+		@include pad(30px 30px null 30px);
+		height:100vh;
+	}
+	#map{
+		width:40%;
+		@include media($lg-max){
+			@include position(absolute, 90px 100px null null);
+		}
+		@include media($xl-min){
+			@include position(absolute, 90px 240px null null);
+		}
+		
+
+	}
+}
