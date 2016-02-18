@@ -33,7 +33,7 @@
 
 	@import "partials/layouts/layout";
 	@import "partials/layouts/map";
-	@import "partials/layouts/street-view";
+	@import "partials/layouts/parallax-bg";
 
 
 
@@ -52,13 +52,6 @@
 /// Modules Stylings
 /// ///////////////////////////////////////
 
-	@import "partials/modules/intro";
-	@import "partials/modules/split-screen";
-	@import "partials/modules/problem-intro";
-	@import "partials/modules/promise-intro";
-	@import "partials/modules/legend";
-	@import "partials/modules/street-view";
-	@import "partials/modules/drag";
 	@import "partials/modules/nav";
 
 /// ////////////////////////////////////////

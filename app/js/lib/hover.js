@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
 		var //$splitScreen = $('#split-screen') ,
 			//$promise = $('#promise-screen') ,
 			$promise = $('#promise-nav-link') ,
@@ -31,4 +31,3 @@ $(document).ready(function() {
 		}
 		$promise.mouseenter( promiseEnter );
 
-});

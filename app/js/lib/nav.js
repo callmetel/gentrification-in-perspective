@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
 	var $menuToggle = $('#menu-toggle'), 
 		$menu = $('#menu'),
 		$navIcon = $('.draw-icon'),
@@ -7,12 +7,7 @@ $(document).ready(function() {
 		$subLine = $('.sub-line'),
 		$promise = $('#promise-nav-link') ,
 		$problem = $('#problem-nav-link'),
-		tl = new TimelineMax({repeat:9999}),
 		navtl = new TimelineMax({paused:true});
-
-
-	tl.to($menu, 5, {css:{backgroundPosition: '49% 88%'}, ease:Power1.easeInOut});
-	tl.to($menu, 5, {css:{backgroundPosition: '52% 93%'}, ease:Power1.easeInOut});
 
 	navtl.to( $navLogo , .00001 , {className:'fadeBlurUp2'});
 	navtl.staggerFrom( $navIcon , 2 , {drawSVG:0}, 0.25, "+=1");
@@ -36,5 +31,3 @@ $(document).ready(function() {
 			$problem.removeClass('blur-out');
 		}
 	});
-
-});

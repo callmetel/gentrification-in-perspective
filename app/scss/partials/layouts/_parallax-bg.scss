@@ -1,0 +1,50 @@
+#main-bg{
+	width: 350vw;
+	height: 350vh;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+
+	@include media($lg-max) {
+		width:700vw;
+	}
+	@include media($xl-max) {
+		width:400vw;
+	}
+
+	img.parallax{
+		width:100%;
+		text-align: center;
+		@include position( absolute, 0 0 0 0);
+		@include media($lg-max) {
+			margin-left:-43%;
+		}
+		@include media($xl-max) {
+			margin-top: -4%;
+			margin-left: -38%;
+		}
+		@include media($xxl-min) {
+			margin-top: -6%;
+			margin-left: -35%;
+		}
+	}
+	img.background{
+		z-index: -1;
+	}
+	img.level-1{
+		z-index: 1;
+	}
+	img.level-2{
+		z-index: 2;
+	}
+	img.level-3{
+		z-index: 3;
+	}
+	img.level-4{
+		z-index: 4;
+	}
+	img.level-5{
+		z-index: 5;
+	}
+}
